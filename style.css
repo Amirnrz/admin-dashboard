@@ -117,9 +117,10 @@ aside {
   width: 70%;
   background-color: hsl(var(--bg));
   min-height: 100vh;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+  bottom: 0;
   transition:transform var(--transition);
   z-index: 10;
   display: flex;
@@ -210,6 +211,9 @@ header {
   flex-direction: column;
   padding: 1rem;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: aliceblue;
 }
 
 header svg {
@@ -302,6 +306,10 @@ main section h2 {
   margin: .4rem 1rem;
 }
 
+main section {
+  margin: 1rem;
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(1,1fr);
@@ -327,7 +335,7 @@ main section h2 {
 }
 
 .announcements {
-  width: 400px;
+  width: 350px;
   padding: 1rem;
   box-shadow: 0 0 10px rgb(128, 128, 128);
   border-radius: var(--radious);
@@ -346,7 +354,7 @@ main section h2 {
 .trending {
   box-shadow: 0 0 10px rgb(108, 108, 108);
   border-radius: var(--radious);
-  width: 400px;
+  width: 350px;
   margin: 0 auto;
   padding: 1rem;
   margin-block: 1rem;
