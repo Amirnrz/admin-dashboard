@@ -115,6 +115,7 @@ body {
 
 aside {
   width: 70%;
+  max-width: 400px;
   background-color: hsl(var(--bg));
   min-height: 100vh;
   position: fixed;
@@ -190,8 +191,8 @@ aside svg {
 .close-btn {
   position: absolute;
   cursor: pointer;
-  right: 0;
-  top: 0;
+  right: 5px;
+  top: 10px;
 }
 
 .close-btn svg {
@@ -214,6 +215,7 @@ header {
   position: sticky;
   top: 0;
   background-color: aliceblue;
+  box-shadow: 10px 0 10px rgb(156, 155, 155);
 }
 
 header svg {
@@ -244,6 +246,7 @@ header svg:hover {
   flex-direction: row;
   align-items: center;
   width: 60%;
+  max-width: 300px;
   justify-content: space-around;
 }
 
@@ -256,18 +259,21 @@ header svg:hover {
 
 
 .top-header__search-bar {
-  margin-block: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 100%;
 }
 
 .search-input {
   background-color: hsl(var(--accent1) / .2);
   width: 80%;
+  max-width: 600px;
   padding: .4rem 1rem;
   border-radius: var(--radious);
+  margin-inline: 1rem;
 }
 
 .bottom-header {
@@ -368,4 +374,38 @@ main section {
 
 .trend > div {
   margin-inline: 1rem;
+}
+
+@media screen and (min-width:720px){
+    main {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+    .projects-section {
+      grid-column: 1 / -1;
+    }
+    .anouncements-section {
+      grid-column: 1 / 2 ;
+    }
+    .trendings-section {
+      grid-column: 3 / 4;
+    }
+    .close-btn svg{
+      width: 40px;
+      height: 40px;
+    }
+    .side-wrapper li a {
+      font-size: 2rem;
+    }
+    .side-wrapper li svg {
+      width: 40px;
+      height: 40px;
+    }
+    .side-header svg {
+      width: 50px;
+      height: 50px;
+    }
+    .side-header a {
+      font-size: 2rem;
+    }
 }
