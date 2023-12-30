@@ -85,6 +85,7 @@ html[data-theme='light'] {
 input,button {
   border: none;
   outline: none;
+  font-family: var(--secondary-font);
 }
 
 button {
@@ -245,9 +246,8 @@ header svg:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 60%;
-  max-width: 300px;
-  justify-content: space-around;
+  width: 50%;
+  justify-content: space-between;
 }
 
 .profile {
@@ -408,4 +408,103 @@ main section {
     .side-header a {
       font-size: 2rem;
     }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  .menu-btn{
+    display: none;
+  }
+  aside {
+    width: 15vw;
+    pointer-events: all;
+    transform: translateX(0);
+    opacity: 1; 
+  }
+  header {
+    width: 85vw;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    background-color: white;
+  }
+  .top-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .top-header__search-bar {
+    width: 50%;
+  }
+  .top-header__info{
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .user-info {
+    justify-content: flex-end;
+  }
+  .user-info > * {
+    margin-inline: 1rem;
+  }
+  .bottom-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-header__profile {
+    display: flex;
+  }
+  .bottom-header__profile > * {
+    margin-left: 1rem;
+  }
+  .header-btn-container {
+    justify-content: flex-end;
+    margin: 0;
+  }
+  .side-wrapper li a {
+    font-size: 1rem;
+  }
+  .side-wrapper li svg {
+    width: 30px;
+    height: 30px;
+  }
+  .side-header svg {
+    width: 40px;
+    height: 40px;
+  }
+  .side-header a {
+    font-size: 1.5rem;
+  }
+  main {
+    width: 85vw;
+    transform: translateX(15vw);
+    padding-top: 12rem;
+    background-color: rgb(243, 242, 242);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr .5fr;
+  }
+  .projects-section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+  .anouncements-section {
+    grid-column: 2 / 3 ;
+    grid-row: 1 / 2 ;
+  }
+  .trendings-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+  }
+  .trendings-section h2 {
+    margin-left: 4rem;
+  }
+  .anouncements-section h2 {
+    margin-left: 4rem;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
 }
